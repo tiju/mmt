@@ -87,7 +87,7 @@ func applyLUTToFile(sourceFilename, lutFilename string, intensity float64, quali
 var applyLutCmd = &cobra.Command{
 	Use:   "apply-lut",
 	Short: "Apply LUT to one or more images",
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(cmd *cobra.Command, _ []string) {
 		input := getFlagString(cmd, "input")
 		lutFile := getFlagString(cmd, "lut")
 

@@ -67,7 +67,7 @@ GetLocation:
 
 		telems := lastEvent.ShitJson()
 		for _, telem := range telems {
-			if telem.Altitude > gpsMaxAltitudeFromConfig() || telem.Latitude == 0 || telem.Longitude == 0 || telem.GpsAccuracy > gpsMinAccuracyFromConfig() {
+			if telem.Altitude > gpsMaxAltitudeFromConfig() || telem.Latitude == 0 || telem.Longitude == 0 || uint(telem.GpsAccuracy) > gpsMinAccuracyFromConfig() {
 				continue
 			}
 

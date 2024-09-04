@@ -24,7 +24,7 @@ import (
 var importCmd = &cobra.Command{
 	Use:   "import",
 	Short: "Import media",
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(cmd *cobra.Command, _ []string) {
 		input := getFlagString(cmd, "input")
 		output := getFlagString(cmd, "output")
 		camera := getFlagString(cmd, "camera")

@@ -15,7 +15,7 @@ import (
 var listDevicesCmd = &cobra.Command{
 	Use:   "list",
 	Short: "List devices available for importing",
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(_ *cobra.Command, _ []string) {
 		partitions, _ := disk.Partitions(false)
 
 		if len(partitions) >= 1 {

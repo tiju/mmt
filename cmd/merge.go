@@ -16,7 +16,7 @@ import (
 var mergeCmd = &cobra.Command{
 	Use:   "merge",
 	Short: "Merge two or more videos together",
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(cmd *cobra.Command, _ []string) {
 		videoMan := videomanipulation.New()
 		videos := getFlagSlice(cmd, "input")
 		totalFrames := 0

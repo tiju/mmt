@@ -11,7 +11,7 @@ import (
 var updateCmd = &cobra.Command{
 	Use:   "update",
 	Short: "Update camera firmware",
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(cmd *cobra.Command, _ []string) {
 		input := getFlagString(cmd, "input")
 		camera := getFlagString(cmd, "camera")
 		c, err := utils.CameraGet(camera)

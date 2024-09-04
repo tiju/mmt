@@ -288,7 +288,6 @@ folderLoop:
 			},
 			Unsorted: true,
 		})
-
 		if err != nil {
 			inlineCounter.SetFailure(err, "")
 		}
@@ -510,7 +509,6 @@ func importFromGoProV1(params utils.ImportParams) utils.Result {
 			},
 			Unsorted: true,
 		})
-
 		if err != nil {
 			inlineCounter.SetFailure(err, "")
 		}
