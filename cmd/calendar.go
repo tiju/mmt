@@ -63,7 +63,7 @@ func getModDates(input string) ([]time.Time, error) {
 var calendarView = &cobra.Command{
 	Use:   "calendar",
 	Short: "View days in which media was captured",
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(_ *cobra.Command, _ []string) {
 		detectedGoPro, connectionType, err := gopro.Detect()
 		if err != nil {
 			cui.Error(err.Error())

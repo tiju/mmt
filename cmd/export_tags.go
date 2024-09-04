@@ -90,7 +90,7 @@ func extractIndividual(input, output, format string) (int, error) {
 var exportTags = &cobra.Command{
 	Use:   "export-tags",
 	Short: "Export HiLight/other tags in video",
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(cmd *cobra.Command, _ []string) {
 		input := getFlagString(cmd, "input")
 		format := getFlagString(cmd, "format")
 		output := getFlagString(cmd, "output")

@@ -215,7 +215,6 @@ func (Entrypoint) Import(params utils.ImportParams) (*utils.Result, error) {
 				return nil
 			},
 		})
-
 		if err != nil {
 			inlineCounter.SetFailure(err, "")
 		}

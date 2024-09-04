@@ -8,10 +8,10 @@ import (
 
 const parent = "gopro"
 
-func gpsMinAccuracyFromConfig() uint16 {
+func gpsMinAccuracyFromConfig() uint {
 	key := fmt.Sprintf("%s.gps_accuracy", parent)
 	viper.SetDefault(key, 500)
-	return uint16(viper.GetUint(key))
+	return viper.GetUint(key)
 }
 
 func gpsMaxAltitudeFromConfig() float64 {
