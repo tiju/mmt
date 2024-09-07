@@ -28,12 +28,13 @@ func getDeviceName(manifest string) string {
 		return name
 	}
 
-	endBytes := []byte{0x1A, 0x0F}
+	endBytes := []byte{0x1A}
 
 	res := bytes.Split(file, append([]byte{0x12, 0x0B}, []byte("Insta360")...))
 	if len(res) == 1 {
 		return name
 	}
+
 	modelName := bytes.Split(res[1], endBytes)
 	if len(modelName) == 1 {
 		return name
