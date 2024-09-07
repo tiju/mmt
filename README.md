@@ -2,36 +2,27 @@
 
 **M**edia **M**anagement **T**ool
 
-Or, what to do if your desk looks like this:
-
-![](https://i.imgur.com/qmgLaxg.jpg)
-
-## Backstory:
-
-I've been using an assortment of scripts over the years to manage media from my different action cameras and drones, it's clear a centralized and unified solution is needed.
+Manage your action camera/drone files intelligently.
 
 This tool draws inspiration from my [dji-utils/offload.sh](https://github.com/KonradIT/djiutils/blob/master/offload.sh) script as well as the popular [gopro-linux tool](https://github.com/KonradIT/gopro-linux/blob/master/gopro#L262) and @deviantollam's [dohpro](https://github.com/deviantollam/dohpro)
 
-Right now the script supports these cameras:
+
+### Camera support:
 
 -   GoPro:
     - HERO2 - HERO5
     - MAX
-    - Fusion
-    - HERO6 - HERO12
--   Insta360: X2, GO2, X3
--   DJI: Osmo Pocket 1/2, DJI Osmo Action 1/2/3, Mavics, Minis
+    - HERO6 - HERO13
+    - HERO 2024
+-   Insta360: X2, GO2, X3, X4
+-   DJI:
+    - Mavic drones (tested with Air 2, Air 2S, Mini 3 Pro, Mavic 3)
+    - Osmo Action cameras (tested with Action 3)
+    - Osmo Pocket cameras (tested with Pocket 1)
 -   Android: All, but with Pixel 6 (Google Camera) specific fixes
+- Autel Lite drone
 
-Feel free to PR!
-
-I plan have the tool read a directory, use a config file and act accordingly to offload media from any type of drive
-
-## To-do:
-
-Refer to [Issues](https://github.com/KonradIT/mmt/issues)
-
-## Features:
+### Features:
 
 - Import videos and photos from the most popular action cameras (GoPro, Insta360, DJI)
 - Fix nonsensical filenames and file structures:
@@ -45,16 +36,16 @@ Refer to [Issues](https://github.com/KonradIT/mmt/issues)
   - Location (eg: `El Escorial, España`)
 - Apply LUT profiles to photos
 
-## Installing:
+### Installing:
 
 Download binary from [the releaser Github Action](https://github.com/KonradIT/mmt/actions/workflows/build-artifacts.yaml)
 
-## Running:
+### Running:
 
 Different commands are supported, [refer to the wiki](https://github.com/KonradIT/mmt/wiki/commands)
 
 [How to configure mmt](https://github.com/KonradIT/mmt/wiki/configfile)
 
-## How it looks:
+### Development:
 
-![](https://i.imgur.com/MjYKhfj.png)
+pkg/* hosts different implementations for each camera.
